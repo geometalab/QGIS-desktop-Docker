@@ -7,8 +7,6 @@ RUN echo 'deb http://qgis.org/ubuntugis trusty main' > /etc/apt/sources.list.d/q
 RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key 3FF5FFCAD71472C4
 RUN apt-get update && apt dist-upgrade -y 
-RUN apt-get install -y oracle-java8-installer libxext-dev libxrender-dev libxtst-dev && \ 
-	apt-get clean
 RUN apt install -y python qgis python-qgis qgis-plugin-grass
 
 
