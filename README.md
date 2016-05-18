@@ -1,6 +1,8 @@
 # QGIS-desktop-Docker
 
-The docker file is still under testing.
+The docker file is based on the work: http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/
+
+>The docker file is still under testing.
 
 Running QGIS Desktop in a docker file
 ```shell
