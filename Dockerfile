@@ -18,3 +18,4 @@ RUN echo "developer:x:${uid}:${gid}:Developer,,,:/home/developer:/bin/bash" >> /
     chown ${uid}:${gid} -R /home/developer
 
 USER developer
+CMD ["qgis", "desktop"]

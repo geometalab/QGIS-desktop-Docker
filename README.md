@@ -12,5 +12,5 @@ docker build -t qgisdesktop:v1 .
 
 Running the docker image:
 ```shell
-docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 -v $HOME/Downloads:/home/developer/Downloads -v $HOME/.Xauthority:/home/developer/.Xauthority --net=host qgisdesktop:v1 sh -c 'qgis desktop'
+docker run -it -e DISPLAY -e QT_X11_NO_MITSHM=1 -v $HOME/Downloads:/home/developer/Downloads -v $HOME/.Xauthority:/home/developer/.Xauthority --net=host qgisdesktop:v1
 ```
