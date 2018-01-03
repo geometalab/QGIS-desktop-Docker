@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  qgis:
+    image: geometalab/qgis-3
+    # image: qgis/qgis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      # TODO: use other user than root
+      - /tmp/qgis:/root/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /etc/localtime:/etc/localtime:ro
+    devices:
+      - /dev/dri:/dev/dri
+      - /dev/snd:/dev/snd
+      # Disable if no local nvidia available
+      - /dev/nvidia0:/dev/nvidia0
+      # Enable, if you have video0 instead
+      # - /dev/video0:/dev/video0
+    environment: 
+      DISPLAY:
+    command: ["qgis"]
